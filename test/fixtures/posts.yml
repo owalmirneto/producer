@@ -3,9 +3,9 @@
 one:
   title: MyString
   excerpt: MyString
-  body: MyString
+  body: MyText
 
 two:
   title: MyString
   excerpt: MyString
-  body: MyString
+  body: MyText

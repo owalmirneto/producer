@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  respond_to :json, :html, :xml
 
   def index
     @posts = Post.all
