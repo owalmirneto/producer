@@ -1,5 +1,8 @@
 Producer::Application.routes.draw do
-  resources :posts
+
+  resources :posts do
+    resources :comments
+  end
 
   get "pages/index"
 
@@ -60,3 +63,4 @@ Producer::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
 end
+
