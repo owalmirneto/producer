@@ -1,4 +1,5 @@
 class ChangeExcerptInPost < ActiveRecord::Migration
+
   def self.up
     change_columm :posts, :excerpt, :text
   end

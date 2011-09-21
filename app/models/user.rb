@@ -6,5 +6,11 @@ class User < ActiveRecord::Base
   def full_name
     "#{first_name} #{last_name}".capitalize
   end
+
+  has_many :posts
+
+  def full_name
+    "#{first_name} #{last_name}".capitalize
+  end
 end
 

@@ -9,7 +9,11 @@
 <h3>Comments</h3>
 
 <div id="comments">
-  <%= render @post.comments || "Nobody commented this post yet." %>
+<% if @post.comments.any? %>
+  <%= render @post.comments %>
+<% else %>
+  <p>Nobody commented this post yet.</p>
+<% end %>
 </div>
 
 <hr/>

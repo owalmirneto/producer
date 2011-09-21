@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
 
+  before_filter :load_resources, :only => [:new,:create, :edit, :update]
+
   def index
     @posts = Post.all
     respond_with @posts
@@ -36,5 +38,13 @@ class PostsController < ApplicationController
     @post.destroy
     respond_with @post
   end
+
+protected
+
+  def load_resources
+    @categories = Category.all
+    @authors = User.all
+  end
+
 end
 
