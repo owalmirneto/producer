@@ -16,7 +16,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #E7E7E7 !important;
-  text-align:center;
+  text-align:left;
 }
 
 a {
@@ -432,3 +432,4 @@ ul.list li.header{
 
 * html .pagination { height: 1%; }
 *:first-child+html .pagination { overflow: hidden; }
+
