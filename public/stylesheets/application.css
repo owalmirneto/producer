@@ -5,7 +5,7 @@
 
 body {
   font-size: 14px;
-  font-family: Lucida Grande, Lucida Sans Unicode, verdana, helvetica, arial, sans-serif;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "verdana", "helvetica", "arial", "sans-serif";
   margin: 0;
   padding: 0;
   color: black;
@@ -14,7 +14,7 @@ body {
 }
 
 input, textarea{
-  font-family: Lucida Grande, Lucida Sans Unicode, verdana, helvetica, arial, sans-serif;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", verdana, helvetica, arial, sans-serif;
 }
 
 hr {
@@ -87,6 +87,7 @@ div#header{
 
 div#header #logo{
   float:left;
+  margin-top: 75px;
 }
 
 div#header #main-nav {
@@ -252,3 +253,4 @@ input.title {
 
 * html .pagination { height: 1%; }
 *:first-child+html .pagination { overflow: hidden; }
+
