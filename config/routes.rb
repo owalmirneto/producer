@@ -13,6 +13,10 @@ Producer::Application.routes.draw do
     resources :comments, :only => [:create]
   end
 
+  match '/home' => 'pages#index', :as => :home
+  match '/prices' => 'pages#prices', :as => :prices
+  match '/tour' => 'pages#tour', :as => :tour
+
   get "pages/index"
 
   # The priority is based upon order of creation:
