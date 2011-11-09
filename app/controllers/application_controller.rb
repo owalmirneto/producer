@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
 protected 
   def change_locale
-    @locale = (params[:locale] || session[:locale] || :en)
-    I18n.locale = session[:locale] = @locale
+    locale = (params[:locale] || session[:locale] || :en)
+    I18n.locale = session[:locale] = locale
   end
 end
