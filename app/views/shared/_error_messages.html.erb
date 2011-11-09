@@ -1,12 +1,13 @@
-<% if @post.errors.any? %>
+<% if resource.errors.any? %>
   <div id="error_explanation">
-    <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+    <h2><%=t "activerecord.errors.template.header", 
+              :count => resource.errors.count,
+              :model => resource.class.model_name.human  %></h2>
 
     <ul>
-    <% @post.errors.full_messages.each do |msg| %>
+    <% resource.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
     <% end %>
     </ul>
   </div>
 <% end %>
-
