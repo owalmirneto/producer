@@ -1,10 +1,13 @@
 Producer::Application.routes.draw do
 
+  resources :assets
+
   root :to => "pages#index"
 
   namespace :admin do
     resources :posts
     resources :categories, :except => [:show]
+    resources :assets
   end
 
   resources :categories
