@@ -65,6 +65,24 @@
          <%= f.text_field :slug, :size => 27 %>
        </div>
      <% end %>
+
+     <%= section t(".media") do %>
+       <div class="media">
+         <%- @assets.each do |a| -%>
+           <%= link_to image_tag(a.document.url(:thumb)) , a.document.url, :target => "_blank"  %>
+         <%- end -%>
+       </div>
+     <% end %>
+
+     <br />
    </div>
 
+ <% end %>
+
+ <%= javascript_include_tag "vendor/jquery.textile.image" %>
+
+ <% content_for :bottom do %>
+   <script type="text/javascript" charset="utf-8">
+     $(".media").insertTextileImageTo("#post_body")
+   </script>
  <% end %>

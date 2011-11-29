@@ -1,5 +1,5 @@
 class Admin::AssetsController < Admin::AdminController
-  #menu_item :assets
+  menu_item :assets
   
   def index
     @assets = Asset.all

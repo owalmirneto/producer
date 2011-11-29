@@ -1,4 +1,6 @@
 class Admin::PostsController < Admin::AdminController
+  menu_item :posts
+
   before_filter :load_resources, :only => %w(new create edit update)
 
   def index
@@ -47,6 +49,7 @@ protected
   def load_resources
     @authors = User.all
     @categories = Category.all
+    @assets = Asset.order("created_at DESC")
   end
 
 end

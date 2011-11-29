@@ -7,7 +7,7 @@ class PostsController < ApplicationController
     @posts = @posts.search(params[:search]) if params[:search]
     @posts = @category.posts if @category.present?
     # why don't work published ?
-    #@posts = @posts.published
+    @posts = @posts.published
     respond_with @posts
   end
 

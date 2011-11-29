@@ -11,11 +11,11 @@ pre {
   padding: 10px;
   font-size: 11px;
 }
-
+/*
 a { color: #000; }
 a:visited { color: #666; }
 a:hover { color: #fff; background-color:#000; }
-
+*/
 div.field, div.actions {
   margin-bottom: 10px;
 }
@@ -23,13 +23,13 @@ div.field, div.actions {
 #notice {
   color: green;
 }
-
+/*
 .field_with_errors {
   padding: 2px;
   background-color: red;
   display: table;
 }
-
+*/
 #error_explanation {
   width: 450px;
   border: 2px solid red;
@@ -52,5 +52,5 @@ div.field, div.actions {
 
 #error_explanation ul li {
   font-size: 12px;
-  list-style: square;
+  list-style: none;
 }

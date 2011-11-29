@@ -11,13 +11,14 @@
     <div id="wrapper">
       <div id="header">
         <div id="main-nav">
-          <ul>
-            <li><a>Dashboard</a></li>
-            <li><a>Posts</a></li>
-            <li><a>Media</a></li>
-            <li><a>Changelog</a></li>
-            <li><a>Inquiries</a></li>
-          </ul>
+          <%= menu do |m| %>
+            <%= m.dashboard 'Dashboard', "#" %>
+            <%= m.posts 'Posts', admin_posts_path %>
+            <%= m.assets 'Assets', admin_assets_path %>
+            <%= m.changelog 'Changelog', "#" %>
+            <%= m.faqs 'FAQ', "#" %>
+            <%= m.inquiries 'Inquiries', "#" %>
+          <% end %>
         </div>
       </div>
     </div>
@@ -32,7 +33,8 @@
         </div>
       </div>
     </div>
-
+    
+    <%= yield :bottom %>
   </body>
 </html>
 

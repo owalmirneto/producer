@@ -12,6 +12,8 @@ class Post < ActiveRecord::Base
 
   before_validation :generate_slug
 
+  default_scope order('created_at DESC') 
+
   scope :published, lambda {
     where('draft = ? AND published_at < ?', false, Time.current)
   }

@@ -1,6 +1,7 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    RedCloth (4.2.9)
     abstract (1.0.0)
     actionmailer (3.0.10)
       actionpack (= 3.0.10)
@@ -40,6 +41,9 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    menu_builder (0.4.2)
+      actionpack (> 3.0)
+      activemodel (> 3.0)
     mime-types (1.17.2)
     paperclip (2.4.5)
       activerecord (>= 2.3.0)
@@ -80,6 +84,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  RedCloth (= 4.2.9)
+  menu_builder (= 0.4.2)
   paperclip (= 2.4.5)
   rails (= 3.0.10)
   sqlite3
