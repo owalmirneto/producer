@@ -12,6 +12,11 @@ class Post < ActiveRecord::Base
 
   before_validation :generate_slug
 
+  # def author_full_name
+  #   self.author.full_name
+  # end
+  delegate :full_name, :to => :author, :prefix => true
+
   default_scope order('created_at DESC') 
 
   scope :published, lambda {

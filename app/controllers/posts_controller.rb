@@ -1,18 +1,21 @@
 class PostsController < ApplicationController
-  # why don't work before_filter ?
+  
   before_filter :load_resources
 
   def index
     @posts = Post.scoped
     @posts = @posts.search(params[:search]) if params[:search]
     @posts = @category.posts if @category.present?
-    # why don't work published ?
     @posts = @posts.published
-    respond_with @posts
+    
+    respond_with @posts do |format|
+      format.atom
+    end
+
   end
 
   def show
-    # @categories = Category.all
+    @categories = Category.all
     @post = Post.find(params[:id])
     respond_with @post
   end
