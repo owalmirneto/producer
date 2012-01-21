@@ -10,8 +10,8 @@ ActiveRecord::Base.transaction do
 
   1.upto 10 do |i|
     Asset.create!(
-    :title => "Image #{i}",
-    :document => File.open(Rails.root.join("public/images/asset#{i}.png"))
+    :title => "Image #{i}" # ,
+    # :document => File.open(Rails.root.join("public/images/asset#{i}.png"))
     )
   end
 
