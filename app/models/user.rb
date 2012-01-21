@@ -1,16 +1,21 @@
 class User < ActiveRecord::Base
-  validates_presence_of :email, :first_name, :last_name
-  validates_uniqueness_of :email
-  validates_format_of :email,
-                      :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
-  def full_name
-    "#{first_name} #{last_name}".capitalize
-  end
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :full_name
+
+  # Include default devise modules. Others available are:
+  # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :recoverable,
+         :rememberable, :trackable, :token_authenticatable, :validatable
+
+  validates_presence_of :full_name
 
   has_many :posts
 
-  def full_name
-    "#{first_name} #{last_name}".capitalize
+  def first_name
+    self.full_name.split.first
+  end
+
+  def last_name
+    self.full_name.split.last
   end
 end
 

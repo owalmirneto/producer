@@ -13,6 +13,8 @@ gem 'menu_builder', '0.4.2'
 
 gem 'RedCloth', '4.2.9'
 
+gem 'devise', '1.5.3'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
