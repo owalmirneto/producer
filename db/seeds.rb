@@ -7,6 +7,13 @@ ActiveRecord::Base.transaction do
     :password_confirmation => "senhas"
   )
 
+  User.create!(
+    :full_name => "Administrator",
+    :email => "admin@producer.com",
+    :password => "123456",
+    :password_confirmation => "123456"
+  )
+
   1.upto 10 do |i|
     Asset.create!(
     :title => "Image #{i}",
