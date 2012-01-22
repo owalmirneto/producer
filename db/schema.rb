@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111124210336) do
+ActiveRecord::Schema.define(:version => 20120330222325) do
 
   create_table "assets", :force => true do |t|
     t.string   "title"
@@ -40,6 +40,16 @@ ActiveRecord::Schema.define(:version => 20111124210336) do
     t.string   "url"
     t.text     "body"
     t.integer  "post_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "inquiries", :force => true do |t|
+    t.string   "email"
+    t.string   "name"
+    t.text     "message"
+    t.string   "subject"
+    t.boolean  "open",       :default => true
     t.datetime "created_at"
     t.datetime "updated_at"
   end

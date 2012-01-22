@@ -13,9 +13,11 @@ Producer::Application.routes.draw do
     resources :categories, :except => [:show]
     resources :assets
     resources :users
+    resources :inquiries, :except => [:new, :create]
   end
 
   resources :categories
+  resources :inquiries, :only => [:new, :create], :path => "contact"
 
   resources :posts do
     resources :comments

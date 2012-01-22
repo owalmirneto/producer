@@ -15,6 +15,8 @@ gem 'RedCloth', '4.2.9'
 
 gem 'devise', '1.5.3'
 
+gem "reverse_captcha", "0.0.1"
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

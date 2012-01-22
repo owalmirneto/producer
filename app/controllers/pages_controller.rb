@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  menu_item :home
 
   def index
     @test = "text"
@@ -9,6 +10,7 @@ class PagesController < ApplicationController
   end
 
   def tour
+    menu_item :tour
     @tour = "tour"
   end
 

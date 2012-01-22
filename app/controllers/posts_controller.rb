@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   
+  menu_item :posts
   before_filter :load_resources
 
   def index
