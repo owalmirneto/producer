@@ -9,12 +9,12 @@ class Inquiry < ActiveRecord::Base
   scope :pending, where(:open => true)
   scope :closed, where(:open => false)
 
-  after_create :deliver_notification
+#   after_create :deliver_notification
 
-protected
+# protected
 
-  def deliver_notification
-  	InquiryMailer.notification(self).deliver
-  end
+#   def deliver_notification
+#   	InquiryMailer.notification(self).deliver
+#   end
 
 end
