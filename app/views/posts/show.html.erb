@@ -16,11 +16,13 @@
   <% if @post.comments.any? %>
     <%= render :partial => @post.comments %>
   <% else %>
-    <p>Nobody commented this post yet.</p>
+    <p id="no_comement">Nobody commented this post yet.</p>
   <% end %>
   </div>
 
-  <%= render "comments/form", :post => @post, :comment => Comment.new %>
+  <div id="comment_form">
+    <%= render "comments/form", :post => @post, :comment => Comment.new %>
+  </div>
 </div>
 
 <%= render "sidebar" %>
