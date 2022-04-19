@@ -13,7 +13,7 @@ gem 'menu_builder', '0.4.2'
 
 gem 'RedCloth', '4.2.9'
 
-gem 'devise', '1.5.3'
+gem 'devise', '1.5.4'
 
 gem "reverse_captcha", "0.0.1"
 
