@@ -11,7 +11,7 @@ gem 'paperclip', '2.4.5'
 
 gem 'menu_builder', '0.4.2'
 
-gem 'RedCloth', '4.2.9'
+gem 'RedCloth', '4.3.2'
 
 gem 'devise', '1.5.3'
 
